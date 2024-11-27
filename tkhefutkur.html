@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de mot de passe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .input-container {
+            margin: 20px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4B0082;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6A0DAD;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strictly protected and confidential access!</h1>
+    <p>Enter a partner password or dealing with a joint operation</p>
+
+    <div class="input-container">
+        <input type="password" id="password" placeholder="passwordenter">
+        <button onclick="checkPassword()">Valider</button>
+    </div>
+
+    <p id="error-message" class="error"></p>
+
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById("password").value;
+            const correctPassword = "AZCSB"; // Le mot de passe attendu
+            const errorMessage = document.getElementById("error-message");
+
+            if (passwordInput === correctPassword) {
+                // Si le mot de passe est correct, redirige vers la nouvelle page
+                window.location.href = "abykss.html"; // Remplace par ton URL
+            } else {
+                // Sinon, affiche un message d'erreur
+                errorMessage.textContent = "Error, access denied";
+            }
+        }
+    </script>
+</body>
+</html>
