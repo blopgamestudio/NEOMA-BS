@@ -68,5 +68,23 @@
             }
         }
     </script>
+
+
+<script>
+    function checkPassword() {
+        const passwordInput = document.getElementById("password").value;
+        const correctPassword = "NEMOA"; // Le mot de passe attendu
+        const errorMessage = document.getElementById("error-message");
+
+        if (passwordInput === correctPassword) {
+            // Si le mot de passe est correct, redirige vers la nouvelle page
+            window.location.href = "inkorekt.html"; // Remplace par ton URL
+        } else {
+            // Sinon, affiche un message d'erreur
+            errorMessage.textContent = "Error, access denied";
+        }
+    }
+</script>
+
 </body>
 </html>
