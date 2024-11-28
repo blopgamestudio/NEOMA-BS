@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARG QCM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4B0082;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #6A0DAD;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scientific Evaluation Form</h1>
+    <form id="qcm">
+        <div class="questions">
+            <!-- Questions générées -->
+            <div class="question">
+                <p>1. What is your opinion on hybrid constellations of type 798656?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q1" value="1"> Interesting, but irrelevant</label>
+                    <label><input type="radio" name="q1" value="2"> Disturbingly accurate</label>
+                    <label><input type="radio" name="q1" value="3"> I don’t believe in constellations</label>
+                    <label><input type="radio" name="q1" value="4"> They could collapse the metanetwork</label>
+                    <label><input type="radio" name="q1" value="5"> A pseudo-mathematical fraud</label>
+                    <label><input type="radio" name="q1" value="6"> Intriguing but misunderstood</label>
+                    <label><input type="radio" name="q1" value="7"> Essential to reverse engineering reality</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. How do you interpret a phase-inverted particle storm at 70 Kelvin?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q2" value="1"> Unprecedented symmetry</label>
+                    <label><input type="radio" name="q2" value="2"> A ripple in thermal stability</label>
+                    <label><input type="radio" name="q2" value="3"> A fluke in high-energy physics</label>
+                    <label><input type="radio" name="q2" value="4"> A gateway to negative entropy</label>
+                    <label><input type="radio" name="q2" value="5"> A benign quantum echo</label>
+                    <label><input type="radio" name="q2" value="6"> Insufficient data</label>
+                    <label><input type="radio" name="q2" value="7"> A cosmic warning sign</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Is the fractal pattern of anomalous 12th-dimensional gases deterministic?</p>
+                <div class="answers">
+                    <label><input type="radio" name="q3" value="1"> Only under strict confinement</label>
+                    <label><input type="radio" name="q3" value="2"> No, they're inherently chaotic</label>
+                    <label><input type="radio" name="q3" value="3"> They are hyperdeterministic</label>
+                    <label><input type="radio" name="q3" value="4"> This question violates causality</label>
+                    <label><input type="radio" name="q3" value="5"> Fractal gases don't exist</label>
+                    <label><input type="radio" name="q3" value="6"> They follow recursive models</label>
+                    <label><input type="radio" name="q3" value="7"> Irrelevant in our spacetime</label>
+                </div>
+            </div>
+            <!-- Ajoute plus de questions ici avec des réponses tout aussi étranges -->
+        </div>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        // Réponses correctes, indexées par question
+        const correctAnswers = {
+            q1: "4",
+            q2: "4",
+            q3: "4",
+            // Continue pour toutes les questions ajoutées
+        };
+
+        function checkAnswers() {
+            const form = document.getElementById("qcm");
+            let correctCount = 0;
+
+            // Vérifie les réponses
+            for (const [question, answer] of Object.entries(correctAnswers)) {
+                const selected = form.querySelector(`input[name="${question}"]:checked`);
+                if (selected && selected.value === answer) {
+                    correctCount++;
+                }
+            }
+
+            const result = document.getElementById("result");
+            if (correctCount === Object.keys(correctAnswers).length) {
+                window.location.href = "nokjaek.html";
+            } else {
+                result.textContent = "Too bad! You are a J.A.E.+ entity, your status no longer allows you access to the university restaurant, the library and other non-prescribed subsections.";
+            }
+        }
+    </script>
+</body>
+</html>

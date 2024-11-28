@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MET</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">NEMOA</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="kampuks.html">Campus</a></li>
+                    <li><a href="Prokgkrammeks.html">Programmes</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h1>Method AYT8952ERJS88R33ZE6Z3DF6ER</h1>      
+        
+    <form id="quizForm">
+        <div class="question">
+            <p>1. What color is the sound of a nebula?</p>
+            <ul>        
+                <li><label><input type="radio" name="q1" value="A"/> A. Red and loud</label></li>
+                <li><label><input type="radio" name="q1" value="B"/> B. Ultraviolet whispers</label></li>
+                <li><label><input type="radio" name="q1" value="C"/> C. Green silence</label></li>
+                <li><label><input type="radio" name="q1" value="D"/> D. Echoes of orange</label></li>
+                <li><label><input type="radio" name="q1" value="E"/> E. Blue vibrations</label></li>
+                <li><label><input type="radio" name="q1" value="F"/> F. Invisible roar</label></li>
+                <li><label><input type="radio" name="q1" value="G"/> G. Quantum pink</label></li>
+                </ul>
+        </div>
+                
+        <div class="question">
+            <p>2. If stars had flavors, what would they taste like?</p>
+            <ul>
+                <li><label><input type="radio" name="q2" value="A"/> A. Vanilla explosions.</label></li>
+                <li><label><input type="radio" name="q2" value="B"/> B. Burnt caramel.</label></li>
+                <li><label><input type="radio" name="q2" value="C"/> C. Spicy void.</label></li>
+                <li><label><input type="radio" name="q2" value="D"/> D. Minty plasma.</label></li>
+                <li><label><input type="radio" name="q2" value="E"/> E. Frozen mango.</label></li>
+                <li><label><input type="radio" name="q2" value="F"/> F. Chocolate antimatter.</label></li>
+                <li><label><input type="radio" name="q2" value="G"/> G. Lemon stardust.</label></li>
+            </ul>
+        </div>
+            
+        <div class="question">
+            <p>3. What happens when the Quintessence of a dandelion is mixed with the lunar dust from the 33rd moon of Saturn?</p>
+            <ul>
+                <li><label><input type="radio" name="q3" value="A"/> A. It creates a wormhole in the fabric of time.</label></li>
+                <li><label><input type="radio" name="q3" value="B"/> B. It transforms ordinary water into liquid mercury.</label></li>
+                <li><label><input type="radio" name="q3" value="C"/> C. It generates an eternal flame that can only be extinguished by an immortal.</label></li>
+                <li><label><input type="radio" name="q3" value="D"/> D. It is a fundamental component of the recipe for eternal life.</label></li>
+                <li><label><input type="radio" name="q3" value="E"/> E. It creates a paradox, trapping you in a parallel universe.</label></li>
+                <li><label><input type="radio" name="q3" value="F"/> F. It disintegrates into dark matter, creating an anti-planet.</label></li>
+                <li><label><input type="radio" name="q3" value="G"/> G. It merges into a single atom that can control the human mind.</label></li>
+            </ul>
+        </div>
+
+        <button type="button" id="validateTest">Submit</button>
+    </form>
+
+        <div id="errorMessage"></div>
+        <div id="successMessage"></div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "B" ,
+            q2: "D" ,
+            q3: "F" ,
+        };
+
+        document.getElementById('validateTest').addEventListener('click', function () {
+            const form = document.getElementById('quizForm');
+            const errorMessageElement = document.getElementById('errorMessage');
+            const successMessageElement = document.getElementById('successMessage');
+            
+            errorMessageElement.style.display = 'none';
+            successMessageElement.style.display = 'none';
+
+            let allCorrect = true;
+
+            for (let question in correctAnswers) {
+                const selectedAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                if (!selectedAnswer || selectedAnswer.value !== correctAnswers[question]) {
+                    allCorrect = false;
+                    break;
+                }
+            }
+
+            if (allCorrect) {
+                successMessageElement.textContent = "Redirecting...";
+                successMessageElement.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = "nokjaek.html"; 
+                }, 2000);
+            } else {
+                errorMessageElement.textContent = "Too bad! You are a J.A.E.+ entity, your status no longer allows you access to the university restaurant, the library, and other non-prescribed subsections";
+                errorMessageElement.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+q1: "B", 
+q2: "D", 
+q3: "F", 
+q4: "A", 
+q5: "C", 
+q6: "E", 
+q7: "G", 
+q8: "B", 
+q9: "D", 
+q10: "A",
+q11: "C", 
+q12: "F", 
+q13: "E", 
+q14: "B", 
+q15: "G", 
+q16: "A", 
+q17: "D", 
+q18: "F", 
+q19: "E", 
+q20: "C",
+q21: "B", 
+q22: "G", 
+q23: "A", 
+q24: "D", 
+q25: "F", 
+q26: "C", 
+q27: "E", 
+q28: "B", 
+q29: "G", 
+q30: "A",
+q31: "F", 
+q32: "D", 
+q33: "C", 
+q34: "B", 
+q35: "E", 
+q36: "G", 
+q37: "A", 
+q38: "F", 
+q39: "C", 
+q40: "D",
+q41: "B", 
+q42: "G", 
+q43: "A", 
+q44: "E", 
+q45: "D", 
+q46: "C", 
+q47: "F", 
+q48: "B", 
+q49: "G", 
+q50: "A"
+
+
+
+
+
+
+</html>
